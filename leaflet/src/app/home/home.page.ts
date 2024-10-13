@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
 
+//Deklarasi Komponen
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -10,8 +11,10 @@ export class HomePage {
   map!: L.Map;
   currentLayer!: L.TileLayer;
 
+  //fungsi yg berjalan ketika inisialisasi
   constructor() {}
 
+  //dijalankan setelah komponen terinisialisasi
   ngOnInit() {}
 
   ionViewDidEnter() {
