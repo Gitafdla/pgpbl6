@@ -4,7 +4,7 @@
     {
       "src": "angular.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/<nama-proyek-anda>" }
+      "config": { "distDir": "dist/leaflet" }
     }
   ],
   "routes": [

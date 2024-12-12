@@ -30,7 +30,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     // Initialize map
-    this.map = L.map('mapId').setView([-6.174803773180802, 106.82667995208206], 11);
+    this.map = L.map('mapId').setView([-6.172585117601355, 106.82667995208206], 11);
 
     // Add default tile layer
     this.currentLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -57,21 +57,21 @@ export class HomePage {
       const coord: L.LatLngTuple = [station.x, station.y];
       const marker = L.marker(coord, { icon: this.markerIcon }).addTo(this.map);
 
-      // Create popup content dynamically
+      // Create popup content dynamically with bold text
       let popupContent = `
-        <b>${station.nama}</b><br>
-        Jam Buka: ${station.jam_buka}<br>
+        <b>Nama:</b> ${station.nama}<br>
+        <b>Jam Buka:</b> ${station.jam_buka}<br>
       `;
 
       // Add CHAdeMO, CCS, and type2 to the popup only if they are not empty
       if (station.CHAdeMO) {
-        popupContent += `CHAdeMO: ${station.CHAdeMO}<br>`;
+        popupContent += `<b>CHAdeMO:</b> ${station.CHAdeMO}<br>`;
       }
       if (station.CCS) {
-        popupContent += `CCS: ${station.CCS}<br>`;
+        popupContent += `<b>CCS:</b> ${station.CCS}<br>`;
       }
       if (station.type2) {
-        popupContent += `Type 2: ${station.type2}<br>`;
+        popupContent += `<b>Type 2:</b> ${station.type2}<br>`;
       }
 
       // Bind the generated popup content to the marker
