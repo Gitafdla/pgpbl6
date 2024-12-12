@@ -4,7 +4,10 @@
     {
       "src": "angular.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/leaflet" }
+      "config": {
+        "distDir": "dist/PGPBL/leaflet",
+        "buildCommand": "npm run build"
+      }
     }
   ],
   "routes": [
