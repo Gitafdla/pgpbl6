@@ -18,8 +18,8 @@ export class HomePage {
   // Initialize the custom marker icon
   initializeMarkerIcon() {
     this.markerIcon = L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // URL for the custom icon
-      iconSize: [32, 32], // Size of the icon
+      iconUrl: 'assets/lokasi.png', // URL for the custom icon
+      iconSize: [40, 57], // Size of the icon
       iconAnchor: [16, 32], // The point of the icon which will be anchored to the marker position
       popupAnchor: [0, -32] // The point from which the popup will appear relative to the icon
     });
@@ -30,7 +30,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     // Initialize map
-    this.map = L.map('mapId').setView([-6.172585117601355, 106.82667995208206], 11);
+    this.map = L.map('mapId').setView([-6.172585117601355, 106.82667995208206], 10);
 
     // Add default tile layer
     this.currentLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -49,7 +49,13 @@ export class HomePage {
       { nama: 'SPKLU Kuningan', x: -6.217118985, y: 106.8261953, jam_buka: '24 jam', CHAdeMO: '', CCS: '', type2: '11 kW' },
       { nama: 'SPKLU Fatmawati', x: -6.265923122, y: 106.7990728, jam_buka: '24 jam', CHAdeMO: '50 kW', CCS: '50 kW', type2: '43 kW' },
       { nama: 'SPKLU Halim', x: -6.257049981, y: 106.8859335, jam_buka: '24 jam', CHAdeMO: '', CCS: '200 kW', type2: '' },
-      { nama: 'SPKLU Cakung', x: -6.164062307, y: 106.9592539, jam_buka: '24 jam', CHAdeMO: '400 kW', CCS: '350 kW', type2: '' },
+      { nama: 'SPKLU Gatot Subroto', x: -6.219344177496117, y: 106.82050593908875, jam_buka: '24 jam', CHAdeMO: '', CCS: '100 kW', type2: '' },
+      { nama: 'SPKLU Pagedangan', x: -6.297980351323858, y: 106.64643287441493, jam_buka: '10.00-22.00', CHAdeMO: '25 Kw', CCS: '20 kW', type2: '22 kW' },
+      { nama: 'SPKLU Cipayung', x: -6.3306488951200866, y: 106.88668241609079, jam_buka: '24 jam', CHAdeMO: '', CCS: '60 kW', type2: '' },
+      { nama: 'SPKLU AEON MALL', x: -6.161675577628863, y: 107.0076632633992, jam_buka: '10.00-21.30', CHAdeMO: '400 kW', CCS: '350 kW', type2: '' },
+      { nama: 'SPKLU Pondok Gede', x: -6.245638390233918,  y: 106.92457915781385, jam_buka: '24 jam', CHAdeMO: '50 kW', CCS: '50 kW', type2: '7 kW' },
+      { nama: 'SPKLU Pulo Gadung', x: -6.162358257101254,  y: 106.88750030158272, jam_buka: '07:00-222.00', CHAdeMO: '', CCS: '200 kW', type2: '' },
+      { nama: 'SPKLU Menteng Dalam', x: -6.2074130779529355, y: 106.84424163597973, jam_buka: '24 jam', CHAdeMO: '', CCS: '', type2: '44 kW' },
     ];
 
     // Loop through the stations and add markers with the custom icon and popups
